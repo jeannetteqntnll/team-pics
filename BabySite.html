@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 10px;
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .grid-item {
+            width: 100%;
+            height: 0;
+            padding-bottom: 100%;
+            position: relative;
+        }
+        .grid-item img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        .grid-item span {
+            display: none;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255,255,255,0.8);
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>My Image Grid</h1>
+    <div class="grid">
+        <div class="grid-item" onclick="reveal(this, 'picB.png', 'name1')">
+            <img src="picA.png">
+            <span></span>
+        </div>
+        <div class="grid-item" onclick="reveal(this, 'picB.png', 'name2')">
+            <img src="picA.png">
+            <span></span>
+        </div>
+        <div class="grid-item" onclick="reveal(this, 'picB.png', 'name3')">
+            <img src="picA.png">
+            <span></span>
+        </div>
+        <div class="grid-item" onclick="reveal(this, 'picB.png', 'name4')">
+            <img src="picA.png">
+            <span></span>
+        </div>
+        <div class="grid-item" onclick="reveal(this, 'picB.png', 'name5')">
+            <img src="picA.png">
+            <span></span>
+        </div>
+        <div class="grid-item" onclick="reveal(this, 'picB.png', 'name6')">
+            <img src="picA.png">
+            <span></span>
+        </div>
+        <div class="grid-item" onclick="reveal(this, 'picB.png', 'name7')">
+            <img src="picA.png">
+            <span></span>
+        </div>
+        <div class="grid-item" onclick="reveal(this, 'picB.png', 'name8')">
+            <img src="picA.png">
+            <span></span>
+        </div>
+        <div class="grid-item" onclick="reveal(this, 'picB.png', 'name9')">
+            <img src="picA.png">
+            <span></span>
+        </div>
+    </div>
+    <script>
+        function reveal(element, newImageSrc, name) {
+            var img = element.querySelector('img');
+            var span = element.querySelector('span');
+            img.src = newImageSrc;
+            span.textContent = name;
+            span.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
